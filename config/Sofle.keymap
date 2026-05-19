@@ -105,11 +105,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp RA(GRAVE)  &kp F1      &kp F2     &kp F3       &kp F4       &kp F5                              &kp F6  &kp F7    &kp F8       &kp F9         &kp F10    &kp F11
-&trans         &kp INS     &kp UP     &kp K_CMENU  &trans       &trans                              &trans  &trans    &kp UP       &trans         &kp PSCRN  &kp F12
-&trans         &kp LEFT    &kp DOWN   &kp RIGHT    &trans       &kp CLCK                            &trans  &kp LEFT  &kp DOWN     &kp RIGHT      &trans     &trans
-&trans         &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans     &trans         &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans     &kp BACKSPACE
-                           &trans     &trans       &trans       &trans    &kp RET    &kp BACKSPACE  &trans  &trans    &trans       &trans
+&kp RA(GRAVE)  &kp F1      &kp F2     &kp F3       &kp F4       &kp F5                             &kp F6  &kp F7    &kp F8       &kp F9         &kp F10    &kp F11
+&trans         &kp INS     &kp UP     &kp K_CMENU  &trans       &trans                             &trans  &trans    &kp UP       &trans         &kp PSCRN  &kp F12
+&trans         &kp LEFT    &kp DOWN   &kp RIGHT    &trans       &kp CLCK                           &trans  &kp LEFT  &kp DOWN     &kp RIGHT      &trans     &trans
+&trans         &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans           &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans     &kp BACKSPACE
+                           &trans     &trans       &trans       &trans    &kp BACKSPACE    &trans  &trans  &trans    &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
