@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_MOUSE_SCRL_VAL 200 //140
+#define ZMK_MOUSE_SCRL_VAL 140 //140
 #define U_MOUSE_SCROLL_MAX 20
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20 //Scroll max velocity
 
