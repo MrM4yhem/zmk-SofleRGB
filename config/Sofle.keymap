@@ -7,7 +7,7 @@
 
 #define ZMK_MOUSE_SCRL_VAL 140 //140
 #define U_MOUSE_SCROLL_MAX 20
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10 //Scroll max velocity default 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 60 //Scroll max velocity default 10
 
 #include <dt-bindings/zmk/pointing.h>
 #include <behaviors.dtsi>
@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <50>; //last was 200 (worked)
+            tap-ms = <20>; //last was 200 (worked)
         };
     };
 
