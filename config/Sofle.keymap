@@ -64,9 +64,7 @@
                         &kp LGUI  &none   &kp LALT  &mo 1   &kp LEFT_SHIFT    &kp SPACE  &mo 2   &kp RIGHT_ALT  &none      &kp GRAVE
             >;
 
-            sensor-bindings =
-                    <&scroll_up_down>,
-                    <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+sensor-bindings = <&scroll_up_down &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
@@ -88,9 +86,7 @@
                               &trans     &none     &trans    &trans     &kp LA(SPACE)      &kp LC(BACKSPACE)  &trans     &trans    &trans     &trans
             >;
 
-            sensor-bindings =
-                    <&scroll_up_down>,
-                    <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+sensor-bindings = <&scroll_up_down &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         raise_layer {
@@ -110,8 +106,7 @@
 &trans         &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans           &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans     &kp BACKSPACE
                            &trans     &trans       &trans       &trans    &kp BACKSPACE    &trans  &trans  &trans    &trans       &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
+sensor-bindings = <&scroll_up_down &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         adjust_layer {
@@ -142,9 +137,7 @@
                         &kp LGUI  &kp ESC  &kp LALT  &mo 1   &kp SPACE     &kp SPACE  &mo 2   &kp RIGHT_ALT  &none      &kp GRAVE
             >;
 
-            sensor-bindings =
-                    <&scroll_up_down>,
-                    <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+sensor-bindings = <&scroll_up_down &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
     };
 };
