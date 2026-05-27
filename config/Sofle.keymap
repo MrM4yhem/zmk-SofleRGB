@@ -6,7 +6,7 @@
 
 
 #define U_MOUSE_SCROLL_MAX 20
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 140 //Scroll max velocity default 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80 //Scroll max velocity default 10
 
 #include <dt-bindings/zmk/pointing.h>
 #include <behaviors.dtsi>
