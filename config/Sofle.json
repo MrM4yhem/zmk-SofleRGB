@@ -87,7 +87,7 @@
       "identifier": "encoder_right",
       "compatible": "alps,ec11",
       "label": "RIGHT_ENCODER",
-      "enabled": false
+      "enabled": true
     }
   ]
 }
