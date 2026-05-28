@@ -41,6 +41,13 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             tap-ms = <20>;
         };
+        scroll_left_right: scroll_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            tap-ms = <20>;
+        };
+
     };
 
     keymap {
@@ -86,7 +93,7 @@ sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_up_down>;
                               &trans     &none     &trans    &trans     &kp LA(SPACE)      &kp LC(BACKSPACE)  &trans     &trans    &trans     &trans
             >;
 
-sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_up_down>;
+sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_left_right>;
         };
 
         raise_layer {
@@ -106,7 +113,7 @@ sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_up_down>;
 &trans         &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans           &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans     &kp BACKSPACE
                            &trans     &trans       &trans       &trans    &kp BACKSPACE    &trans  &trans  &trans    &trans       &trans
             >;
-sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_up_down>;
+sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_left_right>;
         };
 
         adjust_layer {
