@@ -51,6 +51,22 @@
         };
     };
 
+    macros {
+        MangoHud_SH: MangoHud {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT &kp F12>;
+            label = "MANGOHUD";
+        };
+
+        Mangohud_Cycle: Mangohud_Cycle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT &kp F11>;
+            label = "MANGOHUD_CYCLE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -143,14 +159,29 @@
         Game {
             display-name = "Game";
             bindings = <
-&none           &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                           &kp N6  &kp N7         &kp N8     &kp N9    &kp N0    &to 0
-&kp TAB         &kp Q   &kp W   &kp E   &kp R     &kp T                            &kp Y   &kp U          &kp I      &kp O     &kp P     &kp SQT
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F     &kp G                            &kp H   &kp J          &kp K      &kp L     &kp SEMI  &kp RET
-&kp LCTRL       &kp Z   &kp X   &kp C   &kp V     &kp B   &kp C_MUTE    &none      &kp N   &kp M          &kp COMMA  &kp DOT   &kp FSLH  &kp BACKSPACE
-                        &none   &none   &kp LALT  &mo 1   &kp SPACE     &kp SPACE  &mo 2   &kp RIGHT_ALT  &kp ESC    &kp LGUI
+&none           &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                           &Mangohud_Cycle  &MangoHud_SH   &kp N8     &kp N9    &kp N0    &to 0
+&kp TAB         &kp Q   &kp W   &kp E   &kp R     &kp T                            &kp Y            &kp U          &kp I      &kp O     &kp P     &kp SQT
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F     &kp G                            &kp H            &kp J          &kp K      &kp L     &kp SEMI  &kp RET
+&kp LCTRL       &kp Z   &kp X   &kp C   &kp V     &kp B   &kp C_MUTE    &none      &kp N            &kp M          &kp COMMA  &kp DOT   &kp FSLH  &kp BACKSPACE
+                        &none   &none   &kp LALT  &mo 5   &kp SPACE     &kp SPACE  &mo 2            &kp RIGHT_ALT  &kp ESC    &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_up_down>;
+        };
+
+        Game_Raise {
+            display-name = "Nigga";
+            bindings = <
+&kp RA(GRAVE)  &kp F1      &kp F2     &kp F3       &kp F4       &kp F5                             &kp F6  &kp F7    &kp F8       &kp F9         &kp F10    &kp F11
+&trans         &kp INS     &kp UP     &kp K_CMENU  &trans       &trans                             &trans  &trans    &kp UP       &trans         &kp PSCRN  &kp F12
+&trans         &kp LEFT    &kp DOWN   &kp RIGHT    &trans       &kp CLCK                           &trans  &kp LEFT  &kp DOWN     &kp RIGHT      &trans     &kp RIGHT_SHIFT
+&trans         &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans           &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans     &kp BACKSPACE
+                           &trans     &trans       &trans       &trans    &kp BACKSPACE    &trans  &trans  &trans    &trans       &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>,
+                <&scroll_left_right>;
         };
     };
 };
